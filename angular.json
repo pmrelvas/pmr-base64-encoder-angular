@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "pmr-base64",
+      "prefix": "pmr",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
