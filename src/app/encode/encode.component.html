@@ -1,1 +1,30 @@
-<p>encode works!</p>
+<div class="container">
+  <section class="input-to-encode">
+
+    <mat-form-field appearance="fill" id="textarea-text-to-encode">
+      <mat-label>Text to Encode</mat-label>
+      <textarea matInput rows="5" [formControl]="textToEncodeFormControl"></textarea>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" id="dropdown-charset">
+      <mat-label>Charset</mat-label>
+      <mat-select [formControl]="charsetFormControl">
+        <mat-option *ngFor="let charset of charsets" [value]="charset">
+          {{charset}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button mat-button (click)="onEncodeClick()">Encode</button>
+
+
+  </section>
+
+  <section class="encoded-output">
+    <mat-form-field appearance="fill" id="textarea-encoded-text">
+      <mat-label>Encoded Output</mat-label>
+      <textarea matInput [value]="encodedText"></textarea>
+    </mat-form-field>
+  </section>
+
+</div>
