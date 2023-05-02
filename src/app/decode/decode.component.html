@@ -1,1 +1,34 @@
-<p>decode works!</p>
+<div class="container">
+  <section class="section-input">
+
+    <mat-form-field appearance="fill" id="textarea-text-to-decode">
+      <mat-label>Text to Decode</mat-label>
+      <textarea matInput rows="10" [formControl]="textToDecodeFormControl"></textarea>
+    </mat-form-field>
+
+    <div class="input-actions">
+
+      <mat-form-field appearance="fill" id="dropdown-charset">
+        <mat-label>Charset</mat-label>
+        <mat-select [formControl]="charsetFormControl">
+          <mat-option *ngFor="let charset of charsets" [value]="charset">
+            {{charset}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <button mat-button id="btn-decode" (click)="onDecodeClick()">Decode</button>
+    </div>
+  </section>
+
+  <mat-divider></mat-divider>
+
+  <section class="section-output">
+    <mat-form-field appearance="fill" id="textarea-decoded-text">
+      <mat-label>Decoded Output</mat-label>
+      <textarea matInput rows="10" [value]="decodedText"></textarea>
+    </mat-form-field>
+  </section>
+
+</div>
+
