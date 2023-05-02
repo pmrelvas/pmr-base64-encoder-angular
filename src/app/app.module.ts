@@ -14,6 +14,8 @@ import { EncodeComponent } from './encode/encode.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatDividerModule } from '@angular/material/divider';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +34,7 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatSelectModule,
     MatInputModule,
+    MatDividerModule,
     FormsModule,
     ReactiveFormsModule
   ],
