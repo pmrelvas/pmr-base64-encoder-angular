@@ -17,7 +17,7 @@
         </mat-select>
       </mat-form-field>
 
-      <button mat-button class="btn-main-action  " (click)="onDecodeClick()">Decode</button>
+      <button mat-button class="btn-main-action" (click)="onDecodeClick()">Decode</button>
     </div>
   </section>
 
@@ -26,7 +26,7 @@
   <section class="section-output">
     <mat-form-field appearance="fill" id="textarea-decoded-text">
       <mat-label>Decoded Output</mat-label>
-      <textarea matInput rows="10" [value]="decodedText"></textarea>
+      <textarea matInput rows="10" readonly="true" [value]="decodedText"></textarea>
     </mat-form-field>
   </section>
 

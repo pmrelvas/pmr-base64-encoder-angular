@@ -63,6 +63,7 @@ body {
   .section-input {
     display: flex;
     flex-direction: column;
+    gap: 0.4rem;
 
     .input-actions {
       display: flex;
@@ -97,4 +98,8 @@ body {
       }
     }
   }
+}
+
+mat-error {
+  font-size: 0.8rem;
 }
