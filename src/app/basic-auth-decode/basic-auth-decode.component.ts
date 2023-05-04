@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Charsets } from '../shared/enums/charsets.enum';
 import { EncodingService } from '../shared/services/encoding.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'pmr-basic-auth-decode',
@@ -16,10 +17,15 @@ export class BasicAuthDecodeComponent {
   decodedUsername: string = '';
   decodedPassword: string = '';
 
+  constructor(private snackbar: MatSnackBar) {
+
+  }
+
   onDecodeClick(): void {
     const decodedText = EncodingService.decodeBase64(this.textToDecodeFormControl.value || '', this.charsetFormControl.value as BufferEncoding);
     const decodedArr = decodedText.split(':');
     if (decodedArr.length != 2) {
+      this.snackbar.open('Invalid text: Does not match a basic token!', 'close')
       // TODO: add notification toast error
       return;
     }
