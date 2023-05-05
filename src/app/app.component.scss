@@ -6,3 +6,7 @@
 .flex-space {
   flex-grow: 1;
 }
+
+.main-container {
+  height: calc(100dvh - 60px);
+}

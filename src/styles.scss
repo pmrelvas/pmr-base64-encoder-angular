@@ -60,6 +60,10 @@ $dark-theme: mat.define-dark-theme((
 }
 /* You can add global styles to this file, and also import other style files */
 
+* {
+  line-height: 1rem;
+}
+
 html,
 body {
   height: 100%;
