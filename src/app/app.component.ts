@@ -9,8 +9,14 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
 
+  isDarkTheme = false;
+
   constructor(private router: Router) {
 
+  }
+
+  toggleDarkMode(): void {
+    this.isDarkTheme = !this.isDarkTheme;
   }
 
   onEncodeClick(): void {

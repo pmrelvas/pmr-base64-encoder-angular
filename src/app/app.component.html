@@ -3,10 +3,19 @@
     PMR Base64
   </span>
 
-  <button mat-button (click)="onEncodeClick()">Encode</button>
-  <button mat-button (click)="onDecodeClick()">Decode</button>
-  <button mat-button (click)="onBasicAuthEncodeClick()">Basic Auth Encode</button>
-  <button mat-button (click)="onBasicAuthDecodeClick()">Basic Auth Decode</button>
+  <button mat-button (click)="onEncodeClick()" aria-label="Encode text">Encode</button>
+  <button mat-button (click)="onDecodeClick()" aria-label="Decode text">Decode</button>
+  <button mat-button (click)="onBasicAuthEncodeClick()" aria-label="Encode basic token">Basic Auth Encode</button>
+  <button mat-button (click)="onBasicAuthDecodeClick()" aria-label="Decode basic token">Basic Auth Decode</button>
+
+  <div class="flex-space"></div>
+
+  <button mat-mini-fab color="primary" aria-label="Toggle dark theme" (click)="toggleDarkMode()">
+    <mat-icon>dark_mode</mat-icon>
+  </button>
+
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<div class="main-container" [class.dark-theme]="isDarkTheme">
+  <router-outlet></router-outlet>
+</div>
