@@ -1,21 +1,72 @@
 <mat-toolbar color="primary">
-  <span id="nav-home">
-    PMR Base64
-  </span>
+  <span id="nav-home"> PMR Base64 </span>
 
-  <button mat-button (click)="onEncodeClick()" aria-label="Encode text">Encode</button>
-  <button mat-button (click)="onDecodeClick()" aria-label="Decode text">Decode</button>
-  <button mat-button (click)="onBasicAuthEncodeClick()" aria-label="Encode basic token">Basic Auth Encode</button>
-  <button mat-button (click)="onBasicAuthDecodeClick()" aria-label="Decode basic token">Basic Auth Decode</button>
+  <button mat-button (click)="onEncodeClick()" aria-label="Encode text">
+    Encode
+  </button>
+  <button mat-button (click)="onDecodeClick()" aria-label="Decode text">
+    Decode
+  </button>
+  <button
+    mat-button
+    (click)="onBasicAuthEncodeClick()"
+    aria-label="Encode basic token"
+  >
+    Basic Auth Encode
+  </button>
+  <button
+    mat-button
+    (click)="onBasicAuthDecodeClick()"
+    aria-label="Decode basic token"
+  >
+    Basic Auth Decode
+  </button>
 
   <div class="flex-space"></div>
 
-  <button mat-mini-fab color="primary" aria-label="Toggle dark theme" (click)="toggleDarkMode()">
+  <button
+    mat-mini-fab
+    color="primary"
+    aria-label="Toggle dark theme"
+    (click)="toggleDarkMode()"
+  >
     <mat-icon>dark_mode</mat-icon>
   </button>
-
 </mat-toolbar>
 
-<div class="main-container" [class.dark-theme]="isDarkTheme">
-  <router-outlet></router-outlet>
-</div>
+<mat-sidenav-container>
+  <mat-sidenav id="sidenav" mode="side" opened>
+    <mat-nav-list id="sidenav-list">
+      <a mat-list-item routerLink="/encode">
+        <div class="sidenav-menu-item">
+          <mat-icon class="sidenav-icon">vpn_key</mat-icon>
+          <span class="sidenav-label">Encode</span>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/decode">
+        <div class="sidenav-menu-item">
+          <mat-icon class="sidenav-icon">vpn_key_off</mat-icon>
+          <span class="sidenav-label">Decocode</span>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/basic-auth-encode">
+        <div class="sidenav-menu-item">
+          <mat-icon class="sidenav-icon">shield</mat-icon>
+          <span class="sidenav-label">Basic Auth Encode</span>
+        </div>
+      </a>
+
+      <a mat-list-item routerLink="/basic-auth-decode">
+        <div class="sidenav-menu-item">
+          <mat-icon class="sidenav-icon">remove_moderator</mat-icon>
+          <span class="sidenav-label">Basic Auth Decode</span>
+        </div>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content class="main-container" [class.dark-theme]="isDarkTheme">
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -18,6 +18,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatIconModule,
     MatSnackBarModule,
     MatSlideToggleModule,
+    MatSidenavModule,
+    MatListModule,
     FormsModule,
     ReactiveFormsModule,
   ],

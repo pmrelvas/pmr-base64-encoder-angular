@@ -1,6 +1,12 @@
+@import '../styles/colors';
+
 #nav-home {
   font-weight: 600;
   font-size: 1.5rem;
+}
+
+#sidenav {
+  background-color: $pmr-primary;
 }
 
 .flex-space {
@@ -9,4 +15,16 @@
 
 .main-container {
   height: calc(100dvh - 60px);
+}
+
+.sidenav-menu-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.2rem;
+  color: white;
+
+  .sidenav-icon {
+    font-size: 18px !important;
+  }
 }
