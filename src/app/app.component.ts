@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
 
   isDarkTheme = false;
+  isSidenavOpen = false;
 
   constructor(private router: Router) {
 
@@ -33,5 +34,9 @@ export class AppComponent {
 
   onBasicAuthDecodeClick(): void {
     this.router.navigate(['basic-auth-decode']);
+  }
+
+  onHamburgerClick(): void {
+    this.isSidenavOpen = !this.isSidenavOpen;
   }
 }

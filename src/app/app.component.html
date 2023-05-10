@@ -1,26 +1,29 @@
 <mat-toolbar color="primary">
+  <mat-icon id="hamburger-btn" (click)="onHamburgerClick()">menu</mat-icon>
   <span id="nav-home"> PMR Base64 </span>
 
-  <button mat-button (click)="onEncodeClick()" aria-label="Encode text">
-    Encode
-  </button>
-  <button mat-button (click)="onDecodeClick()" aria-label="Decode text">
-    Decode
-  </button>
-  <button
-    mat-button
-    (click)="onBasicAuthEncodeClick()"
-    aria-label="Encode basic token"
-  >
-    Basic Auth Encode
-  </button>
-  <button
-    mat-button
-    (click)="onBasicAuthDecodeClick()"
-    aria-label="Decode basic token"
-  >
-    Basic Auth Decode
-  </button>
+  <div id="navbar-menu-items">
+    <button mat-button (click)="onEncodeClick()" aria-label="Encode text">
+      Encode
+    </button>
+    <button mat-button (click)="onDecodeClick()" aria-label="Decode text">
+      Decode
+    </button>
+    <button
+      mat-button
+      (click)="onBasicAuthEncodeClick()"
+      aria-label="Encode basic token"
+    >
+      Basic Auth Encode
+    </button>
+    <button
+      mat-button
+      (click)="onBasicAuthDecodeClick()"
+      aria-label="Decode basic token"
+    >
+      Basic Auth Decode
+    </button>
+  </div>
 
   <div class="flex-space"></div>
 
@@ -35,7 +38,7 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-  <mat-sidenav id="sidenav" mode="side" opened>
+  <mat-sidenav id="sidenav" mode="side" [opened]="isSidenavOpen">
     <mat-nav-list id="sidenav-list">
       <a mat-list-item routerLink="/encode">
         <div class="sidenav-menu-item">

@@ -1,5 +1,11 @@
 @import '../styles/colors';
 
+#hamburger-btn {
+  padding-right: 0.5rem;
+  cursor: pointer;
+  display: none;
+}
+
 #nav-home {
   font-weight: 600;
   font-size: 1.5rem;
@@ -26,5 +32,15 @@
 
   .sidenav-icon {
     font-size: 18px !important;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #hamburger-btn {
+    display: inline-block;
+  }
+
+  #navbar-menu-items {
+    display: none;
   }
 }
