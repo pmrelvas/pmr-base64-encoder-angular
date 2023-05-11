@@ -1,5 +1,26 @@
 # PmrBase64EncoderAngular
 
+TODO: add description
+
+## Deploy the application
+
+This application is being deployed on github actions `docs` folder.
+
+The application can be build through the following command:
+
+```
+npm run build:prod
+```
+
+## Tests
+
+### Integration tests
+
+This project is using cypress for integration tests. We can run cypress on its headed mode with the command `npm run cy:open`, or on the console line mode through the command `npm run cy:run`.
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
 
 ## Development server
