@@ -30,7 +30,7 @@
         </mat-select>
       </mat-form-field>
 
-      <button mat-raised-button class="btn-main-action" aria-label="Encode text" (click)="onEncodeClick()">
+      <button mat-raised-button class="btn-main-action" aria-label="Encode text" (click)="onEncodeClick()" [disabled]="isEncodeBtnDisabled()">
         Encode
       </button>
     </div>

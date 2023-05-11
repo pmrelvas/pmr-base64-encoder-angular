@@ -30,4 +30,8 @@ export class BasicAuthEncodeComponent {
     const charset = this.charsetFormControl.value;
     this.encodedText = EncodingService.encodeBase64(username + ':' + password, charset as BufferEncoding);
   }
+
+  isEncodeBtnDisabled(): boolean {
+    return !this.usernameFormControl.valid || !this.passwordFormControl.valid;
+  }
 }
