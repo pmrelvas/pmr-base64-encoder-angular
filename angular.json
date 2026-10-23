@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pmr-base64-encoder-angular:build:production"
+              "buildTarget": "pmr-base64-encoder-angular:build:production"
             },
             "development": {
-              "browserTarget": "pmr-base64-encoder-angular:build:development"
+              "buildTarget": "pmr-base64-encoder-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pmr-base64-encoder-angular:build"
+            "buildTarget": "pmr-base64-encoder-angular:build"
           }
         },
         "test": {
