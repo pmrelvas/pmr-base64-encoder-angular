@@ -3,9 +3,10 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'pmr-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'pmr-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
 

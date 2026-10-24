@@ -4,9 +4,10 @@ import { Charsets } from '../shared/enums/charsets.enum';
 import { EncodingService } from '../shared/services/encoding.service';
 
 @Component({
-  selector: 'pmr-basic-auth-encode',
-  templateUrl: './basic-auth-encode.component.html',
-  styleUrls: ['./basic-auth-encode.component.scss']
+    selector: 'pmr-basic-auth-encode',
+    templateUrl: './basic-auth-encode.component.html',
+    styleUrls: ['./basic-auth-encode.component.scss'],
+    standalone: false
 })
 export class BasicAuthEncodeComponent {
   charsets: BufferEncoding[] = Object.values(Charsets);

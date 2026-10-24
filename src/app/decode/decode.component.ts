@@ -4,9 +4,10 @@ import { FormControl } from '@angular/forms';
 import { Charsets } from '../shared/enums/charsets.enum';
 
 @Component({
-  selector: 'pmr-decode',
-  templateUrl: './decode.component.html',
-  styleUrls: ['./decode.component.scss']
+    selector: 'pmr-decode',
+    templateUrl: './decode.component.html',
+    styleUrls: ['./decode.component.scss'],
+    standalone: false
 })
 export class DecodeComponent {
 

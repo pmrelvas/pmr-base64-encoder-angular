@@ -5,9 +5,10 @@ import { EncodingService } from '../shared/services/encoding.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
-  selector: 'pmr-basic-auth-decode',
-  templateUrl: './basic-auth-decode.component.html',
-  styleUrls: ['./basic-auth-decode.component.scss']
+    selector: 'pmr-basic-auth-decode',
+    templateUrl: './basic-auth-decode.component.html',
+    styleUrls: ['./basic-auth-decode.component.scss'],
+    standalone: false
 })
 export class BasicAuthDecodeComponent {
 

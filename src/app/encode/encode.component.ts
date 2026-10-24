@@ -4,9 +4,10 @@ import { FormControl } from '@angular/forms';
 import { EncodingService } from '../shared/services/encoding.service';
 
 @Component({
-  selector: 'pmr-encode',
-  templateUrl: './encode.component.html',
-  styleUrls: ['./encode.component.scss']
+    selector: 'pmr-encode',
+    templateUrl: './encode.component.html',
+    styleUrls: ['./encode.component.scss'],
+    standalone: false
 })
 export class EncodeComponent {
   charsets: BufferEncoding[] = Object.values(Charsets);
